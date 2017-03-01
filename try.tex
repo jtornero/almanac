@@ -1,0 +1,207 @@
+\documentclass[a2,portrait]{article}
+%\documentclass[portrait,a4]{a0poster}
+\usepackage[dvips,svgnames]{xcolor}
+\usepackage{wasysym}
+\usepackage[margin=3cm]{geometry}
+\usepackage{pst-all}
+\usepackage{pstricks-add}
+
+\begin{document}
+%\hspace*{\stretch{0.1}}
+\vspace*{\stretch{0.1}}
+
+
+%DATOS PARA EL SOL
+
+\readdata{\OCSOL}{ALMANAQUE/SOL/OCSOL.csv}
+\readdata{\ORSOL}{ALMANAQUE/SOL/ORSOL.csv}
+
+%DATOS PARA MERCURIO
+
+\readdata{\ORMERCA}{ALMANAQUE/MERCURIO/ORMERC1.csv}
+\readdata{\ORMERCB}{ALMANAQUE/MERCURIO/ORMERC2.csv}
+\readdata{\ORMERCC}{ALMANAQUE/MERCURIO/ORMERC3.csv}
+\readdata{\ORMERCD}{ALMANAQUE/MERCURIO/ORMERC4.csv}
+\readdata{\OCMERCA}{ALMANAQUE/MERCURIO/OCMERC1.csv}
+\readdata{\OCMERCB}{ALMANAQUE/MERCURIO/OCMERC2.csv}
+\readdata{\OCMERCC}{ALMANAQUE/MERCURIO/OCMERC3.csv}
+%DATOS PARA VENUS
+
+\readdata{\ORVENUS}{ALMANAQUE/VENUS/ORVENUS.csv}
+\readdata{\OCVENUSA}{ALMANAQUE/VENUS/OCVENUS1.csv}
+\readdata{\OCVENUSB}{ALMANAQUE/VENUS/OCVENUS2.csv}
+
+%DATOS PARA MARTE
+\readdata{\OCMARTE}{ALMANAQUE/MARTE/OCMARTE.csv}
+\readdata{\ORMARTE}{ALMANAQUE/MARTE/ORMARTE.csv}
+%DATOS PARA JUPITER
+\readdata{\OCJUPITER}{ALMANAQUE/JUPITER/OCJUPITER.csv}
+\readdata{\ORJUPITER}{ALMANAQUE/JUPITER/ORJUPITER.csv}
+%DATOS PARA SATURNO
+\readdata{\OCSATA}{ALMANAQUE/SATURNO/OCSATA.csv}
+\readdata{\ORSATA}{ALMANAQUE/SATURNO/ORSATA.csv}
+\readdata{\ORSATB}{ALMANAQUE/SATURNO/ORSATB.csv}
+%DATOS PARA URANO
+\readdata{\ORURANO}{ALMANAQUE/URANO/ORURANO.csv}
+\readdata{\OCURANOA}{ALMANAQUE/URANO/OCURANOA.csv}
+\readdata{\OCURANOB}{ALMANAQUE/URANO/OCURANOB.csv}
+%DATOS PARA NEPTUNO
+\readdata{\ORNEPTUNO}{ALMANAQUE/NEPTUNO/ORNEPTUNO.csv}
+\readdata{\OCNEPTUNOA}{ALMANAQUE/NEPTUNO/OCNEPTUNOA.csv}
+\readdata{\OCNEPTUNOB}{ALMANAQUE/NEPTUNO/OCNEPTUNOB.csv}
+%DATOS PARA PLUTON
+\readdata{\OCPLUTON}{ALMANAQUE/PLUTON/OCPLUTON.csv}
+\readdata{\ORPLUTONA}{ALMANAQUE/PLUTON/ORPLUTONA.csv}
+\readdata{\ORPLUTONB}{ALMANAQUE/PLUTON/ORPLUTONB.csv}
+%DATOS RETICULA
+\readdata{\RVDOCE}{ALMANAQUE/RETICULA/RVERT.csv}
+\readdata{\RHORA}{ALMANAQUE/RETICULA/RHOR1.csv}
+\readdata{\RHORB}{ALMANAQUE/RETICULA/RHOR2.csv}
+%\readdata{\RHORA}{ALMANAQUE/RETICULA/RHOR1.csv}
+%\readdata{\RHORA}{ALMANAQUE/RETICULA/RHOR1.csv}
+
+\pagecolor{black}
+
+\color{White}
+
+
+
+%\psset{xunit=2.4,yunit=37.96}
+\psset{xunit=2.4,yunit=50,dotsize=.75pt}
+\pspicture(5,0)(20,1)
+%\psset{xunit=0.6,yunit=30}
+%\psline[linecolor=white,linewidth=0.5mm](12,0)(12,1)
+
+\psline[linecolor=white](5.3870001264,1)(19.61420580244,1)
+\psline[linecolor=white](5.3870001264,1)(19.61420580244,1)
+\psline[linecolor=white](5.4028610526,0)(19.61838436907,0)
+
+%\multido{\n=5.5+0.5}{28}{\psline[linecolor=white,linestyle=dotted,dotsep=1mm](\n,0)(\n,1)}
+%\multido{\n=0.00+0.01898}{52}{\psline[linecolor=white,linestyle=dotted,dotsep=2mm](5.0000,\n)(20.000,\n)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%GRAFICOS%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tiny}
+
+%escala horas, abajo
+\rput(5,1.01){\white\sc17h}
+\rput(6,1.01){\white\sc18h}
+\rput(7,1.01){\white\sc19h}
+\rput(8,1.01){\white\sc20h}
+\rput(9,1.01){\white\sc21h}
+\rput(10,1.01){\white\sc22h}
+\rput(11,1.01){\white\sc23h}
+\rput(12,1.01){\white\sc00h}
+\rput(12,1.02){\white\sc U.T.}
+\rput(13,1.01){\white\sc01h}
+\rput(14,1.01){\white\sc02h}
+\rput(15,1.01){\white\sc03h}
+\rput(16,1.01){\white\sc04h}
+\rput(17,1.01){\white\sc05h}
+\rput(18,1.01){\white\sc06h}
+\rput(19,1.01){\white\sc07h}
+\rput(20,1.01){\white\sc08h}
+%escala horas, arriba
+\rput(5,-0.015){\white\sc17h}
+\rput(6,-0.015){\white\sc18h}
+\rput(7,-0.015){\white\sc19h}
+\rput(8,-0.015){\white\sc20h}
+\rput(9,-0.015){\white\sc21h}
+\rput(10,-0.015){\white\sc22h}
+\rput(11,-0.015){\white\sc23h}
+\rput(12,-0.015){\white\sc00h}
+\rput(12,-0.023){\white\sc U.T.}
+\rput(13,-0.013){\white\sc01h}
+\rput(14,-0.015){\white\sc02h}
+\rput(15,-0.015){\white\sc03h}
+\rput(16,-0.015){\white\sc04h}
+\rput(17,-0.015){\white\sc05h}
+\rput(18,-0.015){\white\sc06h}
+\rput(19,-0.015){\white\sc07h}
+\rput(20,-0.015){\white\sc08h}
+
+\color{white}
+%LINEAS MERCURIO
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=blue,showpoints=false,xStart=5,linewidth=0.5pt]{\ORMERCA}}{\white\sc Or. Mercurio}
+\pstextpath[c](2.5,-0.4){\listplot[plotstyle=curve,linecolor=blue,showpoints=false,xStart=5,linewidth=0.5pt]{\ORMERCB}}{\white\sc Or. Mercurio}
+\pstextpath[c](2.5,-0.4){\listplot[plotstyle=curve,linecolor=blue,showpoints=false,xStart=5,linewidth=0.5pt]{\ORMERCC}}{\white\sc Or. Mercurio}
+\pstextpath[c](3,-0.4){\listplot[plotstyle=curve,linecolor=blue,showpoints=false,xStart=5,linewidth=0.5pt]{\ORMERCD}}{\white\sc Or. Mercurio}
+\pstextpath[c](-3,0.1){\listplot[plotstyle=curve,linecolor=blue,showpoints=false,xStart=5,linewidth=0.5pt]{\OCMERCA}}{\white\sc Oc. Mercurio}
+\pstextpath[c](-3,0.1){\listplot[plotstyle=curve,linecolor=blue,showpoints=false,xStart=5,linewidth=0.5pt]{\OCMERCB}}{\white\sc Oc. Mercurio}
+\pstextpath[c](-0.6,0.1){\listplot[plotstyle=curve,linecolor=blue,showpoints=false,xStart=5,linewidth=0.5pt]{\OCMERCC}}{\white\sc Oc. Mercurio}
+
+%LINEAS VENUS
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=green,showpoints=false,xStart=5,linewidth=0.5pt]{\ORVENUS}}{\white\sc Or. Venus}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=green,showpoints=false,xStart=5,linewidth=0.5pt]{\OCVENUSA}}{\white\sc Oc. Venus1}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=green,showpoints=false,xStart=5,linewidth=0.5pt]{\OCVENUSB}}{\white\sc Oc. Venus}
+
+%LINEAS MARTE
+\pstextpath[c](3,0.1){\listplot[plotstyle=curve,linecolor=red,showpoints=false,xStart=5,linewidth=0.5pt]{\OCMARTE}}{\white\sc Oc. Marte}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=red,showpoints=false,xStart=5,linewidth=0.5pt]{\ORMARTE}}{\white\sc Or. Marte}
+
+%LINEAS JUPITER
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=cyan,showpoints=false,xStart=5,linewidth=0.5pt]{\ORJUPITER}}{\white\sc Or. J\'upiter}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=cyan,showpoints=false,xStart=5,linewidth=0.5pt]{\OCJUPITER}}{\white\sc Oc. J\'upiter}
+
+%LINEAS SATURNO
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=orange,showpoints=false,xStart=5,linewidth=0.5pt]{\OCSATA}}{\white\sc Oc. Saturno}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=orange,showpoints=false,xStart=5,linewidth=0.5pt]{\ORSATA}}{\white\sc Or. Saturno1}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=orange,showpoints=false,xStart=5,linewidth=0.5pt]{\ORSATB}}{\white\sc Or. Saturno2}
+
+%LINEAS URANO
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=brown,showpoints=false,xStart=5,linewidth=0.5pt]{\ORURANO}}{\white\sc Or. Urano}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=brown,showpoints=false,xStart=5,linewidth=0.5pt]{\OCURANOA}}{\white\sc Oc. Urano1}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=brown,showpoints=false,xStart=5,linewidth=0.5pt]{\OCURANOB}}{\white\sc Oc. Urano1}
+
+%LINEAS NEPTUNO
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=LightSkyBlue,showpoints=false,xStart=5,linewidth=0.5pt]{\ORNEPTUNO}}{\white\sc Or. Neptuno}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=LightSkyBlue,showpoints=false,xStart=5,linewidth=0.5pt]{\OCNEPTUNOA}}{\white\sc Oc. Neptuno}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=LightSkyBlue,showpoints=false,xStart=5,linewidth=0.5pt]{\OCNEPTUNOB}}{\white\sc Oc. Neptuno}
+
+%LINEAS PLUTON
+\pstextpath[c](-5,0.1){\listplot[plotstyle=curve,linecolor=violet,showpoints=false,xStart=5,linewidth=0.5pt]{\ORPLUTONA}}{\white\sc Or. Plut\'on}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=violet,showpoints=false,xStart=5,linewidth=0.5pt]{\ORPLUTONB}}{\white\sc Or. Plut\'on}
+\pstextpath[c](0,0.1){\listplot[plotstyle=curve,linecolor=violet,showpoints=false,xStart=5,linewidth=0.5pt]{\OCPLUTON}}{\white\sc Oc. Plut\'on}
+
+%LINEAS SOL
+\pstextpath[c](0,-0.8){\listplot[plotstyle=curve,linecolor=white,showpoints=false,xStart=5,linewidth=0.5pt]{\OCSOL}}{\white\sc\small Ocaso Solar}
+\pstextpath[c](0,0.3){\listplot[plotstyle=curve,linecolor=white,showpoints=false,xStart=5,linewidth=0.5pt]{\ORSOL}}{\white\sc\small Orto Solar}
+
+
+% RETICULA
+\multido{\n=0+-0.5}{16}{%
+\psset{origin={\n,0}}
+\listplot[linecolor=white,plotstyle=dots]{\RVDOCE}}
+\mmultido{\n=0+0.5}{13}{%
+\psset{origin={\n,0}}
+\listplot[linecolor=white,plotstyle=dots]{\RVDOCE}}
+
+\multido{\n=0+-0.01923076}{15}{%
+\psset{origin={0,\n}}
+\listplot[linecolor=white,plotstyle=dots,xStart=5,xEnd=20]{\RHORA}}
+
+%\listplot[linecolor=white,plotstyle=dots]{\RHORA}
+
+%MESES
+
+
+
+\pstextpath[l](1,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Enero}
+\pstextpath[l](5.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Febrero}
+\pstextpath[l](9.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Marzo}
+\pstextpath[l](13.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Abril}
+\pstextpath[l](17.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Mayo}
+\pstextpath[l](21.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Junio}
+\pstextpath[l](25.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Julio}
+\pstextpath[l](29.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Agosto}
+\pstextpath[l](33.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Septiembre}
+\pstextpath[l](37.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Octubre}
+\pstextpath[l](41.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Noviembre}
+\pstextpath[l](45.5,-0.6){\listplot[plotstyle=curve,linecolor=white,showpoints=false,linestyle=none]{\OCSOL}}{\white\sc\tiny Diciembre}
+
+\end{tiny}
+\endpspicture
+
+%\huge{CALENDARIO ASTRONOMICO 2006}
+\end{document}
